@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8dce5">
+<title>إلى يمنى، أميرتي ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap');
+
+:root {
+    --pink: #d94f78;
+    --deep: #963653;
+    --rose: #f5c4d3;
+    --cream: #fffaf6;
+    --ink: #633b4a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 22px 14px;
+    overflow-x: hidden;
+    font-family: 'Cairo', Tahoma, sans-serif;
+    color: var(--ink);
+    background:
+        radial-gradient(ellipse at 15% 15%, #fff4f5 0, transparent 35%),
+        radial-gradient(ellipse at 90% 85%, #f6b7cc 0, transparent 38%),
+        linear-gradient(135deg, #fbe9ed, #f4c5d2 52%, #f9e5e7);
+    position: relative;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .18;
+    background-image: radial-gradient(#b65c78 .65px, transparent .65px);
+    background-size: 8px 8px;
+}
+
+.ambient {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.float {
+    position: absolute;
+    top: -12vh;
+    opacity: .65;
+    animation: fall linear infinite;
+    filter: drop-shadow(0 4px 5px #d45b7b25);
+}
+
+.float:nth-child(1) {
+    left: 7%;
+    animation-duration: 13s;
+    font-size: 22px;
+}
+
+.float:nth-child(2) {
+    left: 21%;
+    animation-duration: 17s;
+    animation-delay: -7s;
+    font-size: 16px;
+}
+
+.float:nth-child(3) {
+    left: 77%;
+    animation-duration: 15s;
+    animation-delay: -4s;
+    font-size: 25px;
+}
+
+.float:nth-child(4) {
+    left: 91%;
+    animation-duration: 19s;
+    animation-delay: -10s;
+    font-size: 18px;
+}
+
+.float:nth-child(5) {
+    left: 58%;
+    animation-duration: 14s;
+    animation-delay: -2s;
+    font-size: 15px;
+}
+
+.float:nth-child(6) {
+    left: 42%;
+    animation-duration: 18s;
+    animation-delay: -12s;
+    font-size: 21px;
+}
+
+@keyframes fall {
+    0% {
+        transform: translate3d(0, -10vh, 0) rotate(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .7;
+    }
+
+    100% {
+        transform: translate3d(35px, 115vh, 0) rotate(300deg);
+        opacity: 0;
+    }
+}
+
+.shell {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 520px);
+}
+
+.topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5px 12px;
+    color: #94536a;
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.brand {
+    letter-spacing: .3px;
+}
+
+.sound {
+    border: 1px solid #e9a8bd;
+    background: #fff9f7d9;
+    color: #98445f;
+    border-radius: 30px;
+    padding: 8px 13px;
+    font: inherit;
+    font-size: .78rem;
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    min-height: 490px;
+    padding: clamp(24px, 6vw, 42px) clamp(20px, 6vw, 38px) 25px;
+    background: rgba(255, 220, 235, 0.55);
+    border: 1px solid #fff;
+    outline: 1px solid #eab2c3;
+    border-radius: 28px;
+    box-shadow:
+        0 24px 70px #8b365322,
+        0 5px 16px #a0445b12;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: arrive .65s ease both;
+}
+
+.card:before,
+.card:after {
+    content: "";
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    border: 1px solid #f1c2d0;
+    border-radius: 50%;
+    opacity: .45;
+    pointer-events: none;
+}
+
+.card:before {
+    top: -70px;
+    right: -55px;
+    box-shadow:
+        0 0 0 12px #f7d9e2,
+        0 0 0 24px #fbe8ed;
+}
+
+.card:after {
+    bottom: -80px;
+    left: -55px;
+    box-shadow:
+        0 0 0 12px #f7d9e2,
+        0 0 0 24px #fbe8ed;
+}
+
+@keyframes arrive {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.eyebrow {
+    font-size: .78rem;
+    letter-spacing: 1px;
+    color: #b76c82;
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+.icon {
+    font-size: 3.1rem;
+    line-height: 1.2;
+    margin: 7px 0 15px;
+    filter: drop-shadow(0 7px 9px #d94f7820);
+    animation: heartbeat 2.2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    8% {
+        transform: scale(1.07);
+    }
+
+    16% {
+        transform: scale(1);
+    }
+
+    24% {
+        transform: scale(1.04);
+    }
+}
+
+h1 {
+    font-family: 'Amiri', 'Cairo', serif;
+    font-size: clamp(2rem, 8vw, 2.7rem);
+    line-height: 1.35;
+    color: var(--pink);
+    margin: 0 0 14px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Amiri', 'Cairo', serif;
+    color: var(--deep);
+    font-size: clamp(1.65rem, 6vw, 2.15rem);
+    line-height: 1.5;
+    margin: 0 0 12px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 2;
+    margin: 0 0 14px;
+    color: #49313a;
+}
+
+.emphasis {
+    color: #c4476d;
+    font-weight: 800;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #d67b96;
+    margin: 7px 0 18px;
+    width: 85%;
+    font-size: .9rem;
+}
+
+.divider:before,
+.divider:after {
+    content: "";
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e8b3c3);
+    flex: 1;
+}
+
+.divider:after {
+    transform: rotate(180deg);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.btn {
+    border: 0;
+    border-radius: 50px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #e86f93, #c9426a);
+    color: white;
+    box-shadow: 0 8px 18px #cf4d762e;
+    font-family: inherit;
+    font-size: .95rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 11px 23px #cf4d7645;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.btn.secondary {
+    background: #fff5f7;
+    color: #a64361;
+    border: 1px solid #edbdcb;
+    box-shadow: none;
+}
+
+.progress {
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    margin: 17px 0 0;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 99px;
+    background: #e9b6c5;
+    transition: all .25s;
+}
+
+.dot.active {
+    width: 23px;
+    background: #d45178;
+}
+
+.signature {
+    font-size: .78rem;
+    color: #b27a8b;
+    margin-top: 18px;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    animation: arrive .45s ease both;
+}
+
+.page.active {
+    display: flex;
+}
+
+.cake {
+    position: relative;
+    width: 210px;
+    height: 175px;
+    margin: 8px auto 12px;
+    filter: drop-shadow(0 12px 8px #a84a5d19);
+}
+
+.plate {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 200px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(#fff, #e8cbd2);
+    box-shadow: 0 4px 7px #a44b6120;
+}
+
+.tier {
+    position: absolute;
+    left: 25px;
+    width: 160px;
+    height: 48px;
+    bottom: 22px;
+    border-radius: 9px 9px 14px 14px;
+    background: linear-gradient(90deg, #e994ae, #ffd6df 48%, #e88ba7);
+    border-bottom: 7px solid #d96d8e;
+}
+
+.tier.top {
+    left: 42px;
+    bottom: 64px;
+    width: 126px;
+    height: 39px;
+    background: linear-gradient(90deg, #f9d9df, #fff0f2, #f3b4c6);
+    border-bottom: 6px solid #e9a0b7;
+}
+
+.icing {
+    position: absolute;
+    left: 42px;
+    bottom: 91px;
+    width: 126px;
+    height: 17px;
+    border-radius: 50%;
+    background: #fff4f4;
+}
+
+.drip {
+    position: absolute;
+    bottom: 76px;
+    width: 10px;
+    height: 19px;
+    background: #fff4f4;
+    border-radius: 0 0 8px 8px;
+    left: 65px;
+}
+
+.drip.d2 {
+    left: 94px;
+    height: 13px;
+}
+
+.drip.d3 {
+    left: 139px;
+    height: 16px;
+}
+
+.candles {
+    position: absolute;
+    left: 70px;
+    bottom: 105px;
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.candle {
+    width: 8px;
+    height: 30px;
+    border-radius: 3px;
+    background: repeating-linear-gradient(
+        135deg,
+        #fff 0 5px,
+        #e97e9f 5px 9px
+    );
+    position: relative;
+}
+
+.flame {
+    position: absolute;
+    width: 12px;
+    height: 17px;
+    left: -2px;
+    top: -16px;
+    border-radius: 55% 45% 55% 45%;
+    background: radial-gradient(
+        ellipse at 50% 65%,
+        #fff8bb 0 22%,
+        #ffc64e 40%,
+        #ff8c56 75%
+    );
+    transform: rotate(8deg);
+    box-shadow: 0 0 12px #ffb34d;
+    animation: flicker .45s infinite alternate;
+}
+
+@keyframes flicker {
+    to {
+        transform: rotate(-8deg) scale(.9);
+        opacity: .85;
+    }
+}
+
+.wish {
+    background: #fff4f6;
+    border: 1px dashed #e9a7ba;
+    border-radius: 18px;
+    padding: 14px 16px;
+    margin: 6px 0 12px;
+    width: 100%;
+}
+
+.wish p {
+    margin: 0;
+    font-family: 'Amiri', 'Cairo', serif;
+    font-size: 1.18rem;
+    color: #87445b;
+}
+
+.burst {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    top: -20px;
+    font-size: 20px;
+    animation: burstfall 3.5s linear forwards;
+}
+
+@keyframes burstfall {
+    to {
+        transform: translateY(110vh) rotate(650deg);
+        opacity: 0;
+    }
+}
+
+.footer-note {
+    font-size: .72rem;
+    color: #a66b80;
+    text-align: center;
+    margin: 12px 0 0;
+}
+
+@media (max-height: 720px) {
+    .card {
+        min-height: 440px;
+        padding-top: 22px;
+        padding-bottom: 18px;
+    }
+
+    .icon {
+        font-size: 2.5rem;
+        margin: 4px 0 9px;
+    }
+
+    p {
+        line-height: 1.8;
+    }
+
+    .cake {
+        transform: scale(.88);
+        margin: -2px auto 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *:before,
+    *:after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+body {
+    background-image:
+        linear-gradient(rgba(255, 220, 235, 0.30), rgba(255, 220, 235, 0.30)),
+        url("yom.jpg");
+    background-size: cover;
+    background-position: center 30% ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
+</head>
+
+<body>
+
+<div class="ambient" aria-hidden="true">
+    <span class="float">♡</span>
+    <span class="float">✦</span>
+    <span class="float">💗</span>
+    <span class="float">♡</span>
+    <span class="float">✧</span>
+    <span class="float">🌸</span>
+</div>
+
+<div class="shell">
+
+    <div class="topline">
+        <span class="brand">♡ To Yomna </span>
+        <button class="sound" id="musicBtn" type="button" aria-pressed="false">
+            ♫ شغّلي اللحن
+        </button>
+    </div>
+
+    <main class="card" id="card">
+
+        <!-- الصفحة الأولى -->
+        <section class="page active" data-page="0">
+
+            <div class="eyebrow">إلى صاحبة العيد 🎀</div>
+
+            <div class="icon">🎀</div>
+
+            <h1>Happy Birthday, Yomna 🎀</h1>
+
+            <div class="divider">♡ ✧ ♡</div>
+            <p> كل عام وانتي بخير❤️</p>
+
+            <p>
+                قررت ما عايدك بطريقة تقليدية 🙃…  
+            </p>
+
+            <p class="emphasis">
+                    وبما اني مهندس برمجيات قلت بستغل هالشغلة 🌚💫  
+            </p>
+
+            <div class="actions">
+                <button class="btn next">
+                    نكمل الحكاية <span>🙃</span>
+                </button>
+            </div>
+
+        </section>
+
+        <!-- الصفحة الثانية -->
+        <section class="page" data-page="1">
+
+            <h1>Happy Birthday</h1>
+
+            <div class="icon">🎉💗🎊</div>
+
+            <h2>يا عيوني </h2>
+
+            <p>
+                ما لح طول بالحكي 😂🙃
+            </p>
+
+            <p>
+                بتمنالك سنة حلوة مليانة فرح ونجاح وايام حلوة وتحققي فيها كلشي بتتمنيه❤️
+            </p>
+
+            <div class="wish">
+                <p>
+              وإن شاء الله سنتك الجديدة تكون أحلى من اللي قبلها. ❤️
+                </p>
+            </div>
+
+            <div class="actions">
+                <button class="btn secondary back">back</button>
+
+                <button class="btn next">
+             Next <span>🎂</span>
+                </button>
+            </div>
+
+        </section>
+
+        <!-- الصفحة الثالثة -->
+        <section class="page" data-page="2">
+
+            <div class="eyebrow"> </div>
+
+            <div class="cake" aria-label="كيكة عيد ميلاد مع شموع مضيئة">
+
+                <div class="plate"></div>
+
+                <div class="tier"></div>
+
+                <div class="tier top"></div>
+
+                <div class="icing"></div>
+
+                <div class="drip"></div>
+
+                <div class="drip d2"></div>
+
+                <div class="drip d3"></div>
+
+                <div class="candles">
+                    <span class="candle">
+                        <i class="flame"></i>
+                    </span>
+
+                    <span class="candle">
+                        <i class="flame"></i>
+                    </span>
+
+                    <span class="candle">
+                        <i class="flame"></i>
+                    </span>
+                </div>
+
+            </div>
+
+            <h2> 🙃...Anyway<br>Happy Birthday, MY Queen❤️</h2>
+
+         
+            
+
+            <div class="wish">
+                <p>
+               كل عام وإنتي احلى واقرب نعمة لقلبي❤️🕯️
+                </p>
+            </div>
+
+            <div class="actions">
+
+                <button class="btn secondary back">Back</button>
+
+                <button class="btn" id="wishBtn">
+                    Release🎉🎊✨
+                </button>
+
+                <button class="btn secondary" id="restart">
+                     From the beginning ↻
+                </button>
+
+            </div>
+             <h5>💻 Made with ❤️ & a little bit of code </h5>
+             
+
+        </section>
+
+        <div class="progress" aria-label="تقدم الرسالة">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="signature">
+            صُنعت بكل حب، خصيصًا إلكِ ♡
+        </div>
+
+    </main>
+
+    <div class="footer-note">
+        خدي نفس، ابتسمي… هالرسالة إلكِ وحدكِ 🌸
+    </div>
+
+</div>
+
+<div class="burst" id="burst" aria-hidden="true"></div>
+
+<script>
+const pages = [...document.querySelectorAll('.page')];
+const dots = [...document.querySelectorAll('.dot')];
+
+let current = 0;
+
+function showPage(index) {
+
+    current = Math.max(0, Math.min(pages.length - 1, index));
+
+    pages.forEach((page, i) => {
+        page.classList.toggle('active', i === current);
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === current);
+    });
+
+    document.getElementById('card').animate(
+        [
+            {
+                opacity: .85,
+                transform: 'translateY(5px)'
+            },
+            {
+                opacity: 1,
+                transform: 'translateY(0)'
+            }
+        ],
+        {
+            duration: 260,
+            easing: 'ease-out'
+        }
+    );
+}
+
+document.querySelectorAll('.next').forEach(button => {
+    button.addEventListener('click', () => {
+        showPage(current + 1);
+    });
+});
+
+document.querySelectorAll('.back').forEach(button => {
+    button.addEventListener('click', () => {
+        showPage(current - 1);
+    });
+});
+
+document.getElementById('restart').addEventListener('click', () => {
+    showPage(0);
+});
+
+// تأثير الاحتفال بالقلوب والورود
+function celebrate() {
+
+    const box = document.getElementById('burst');
+
+    box.innerHTML = '';
+
+    const pieces = [
+        '💗', '💕', '💖', '✨',
+        '🌸', '♡', '🎉', '🎀'
+    ];
+
+    for (let i = 0; i < 42; i++) {
+
+        const el = document.createElement('span');
+
+        el.className = 'confetti';
+
+        el.textContent =
+            pieces[Math.floor(Math.random() * pieces.length)];
+
+        el.style.left = Math.random() * 100 + '%';
+
+        el.style.animationDelay =
+            Math.random() * 1.4 + 's';
+
+        el.style.fontSize =
+            (14 + Math.random() * 18) + 'px';
+
+        box.appendChild(el);
+    }
+
+    setTimeout(() => {
+        box.innerHTML = '';
+    }, 5200);
+}
+
+document.getElementById('wishBtn').addEventListener(
+    'click',
+    celebrate
+);
+
+// تشغيل الأغنية من الملف aaa.mp4
+const myMusic = new Audio('aaa.mp4');
+myMusic.loop = true;
+myMusic.preload = 'auto';
+let musicOn = false;
+const musicBtn = document.getElementById('musicBtn');
+
+function updateMusicButton() {
+    musicBtn.textContent = musicOn ? '♫ إيقاف اللحن' : '♫ شغّلي اللحن';
+    musicBtn.setAttribute('aria-pressed', String(musicOn));
+}
+
+async function startMusic() {
+    try {
+        await myMusic.play();
+        musicOn = true;
+        updateMusicButton();
+    } catch (error) {
+        // بعض المتصفحات تمنع الصوت التلقائي؛ الزر يتيح تشغيله بعد اللمس.
+        musicOn = false;
+        updateMusicButton();
+    }
+}
+
+function stopMusic() {
+    myMusic.pause();
+    musicOn = false;
+    updateMusicButton();
+}
+
+musicBtn.addEventListener('click', async () => {
+    if (!myMusic.paused) {
+        stopMusic();
+    } else {
+        await startMusic();
+    }
+});
+
+// محاولة التشغيل عند فتح الصفحة؛ قد يمنعها المتصفح حتى أول تفاعل من الزائر.
+window.addEventListener('load', () => {
+    startMusic();
+});
+</script>
+
+</body>
+</html>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
