@@ -598,9 +598,8 @@ body {
 
     <div class="topline">
         <span class="brand">♡ To Yomna </span>
-        <button class="sound" id="musicBtn" type="button" aria-pressed="false">
-            ♫ شغّلي اللحن
-        </button>
+       
+
     </div>
 
     <main class="card" id="card">
@@ -643,7 +642,7 @@ body {
             <h2>يا عيوني </h2>
 
             <p>
-                ما لح طول بالحكي 😂🙃
+                ما لح طول بالحكي 🙃
             </p>
 
             <p>
@@ -788,7 +787,14 @@ function showPage(index) {
     );
 }
 
-document.querySelectorAll('.next').forEach(button => {
+const firstNextButton = document.querySelector('.page[data-page="0"] .next');
+firstNextButton.addEventListener('click', () => {
+    // Start the song from the first "نكمل الحكاية" tap.
+    startMusic();
+    showPage(current + 1);
+});
+
+document.querySelectorAll('.page[data-page="1"] .next').forEach(button => {
     button.addEventListener('click', () => {
         showPage(current + 1);
     });
@@ -853,41 +859,16 @@ myMusic.preload = 'auto';
 let musicOn = false;
 const musicBtn = document.getElementById('musicBtn');
 
-function updateMusicButton() {
-    musicBtn.textContent = musicOn ? '♫ إيقاف اللحن' : '♫ شغّلي اللحن';
-    musicBtn.setAttribute('aria-pressed', String(musicOn));
-}
-
 async function startMusic() {
     try {
         await myMusic.play();
         musicOn = true;
-        updateMusicButton();
     } catch (error) {
-        // بعض المتصفحات تمنع الصوت التلقائي؛ الزر يتيح تشغيله بعد اللمس.
+        // إذا تعذّر التشغيل، يمكن للزائرة تجربة الضغط على Next مرة أخرى.
         musicOn = false;
-        updateMusicButton();
     }
 }
 
-function stopMusic() {
-    myMusic.pause();
-    musicOn = false;
-    updateMusicButton();
-}
-
-musicBtn.addEventListener('click', async () => {
-    if (!myMusic.paused) {
-        stopMusic();
-    } else {
-        await startMusic();
-    }
-});
-
-// محاولة التشغيل عند فتح الصفحة؛ قد يمنعها المتصفح حتى أول تفاعل من الزائر.
-window.addEventListener('load', () => {
-    startMusic();
-});
 </script>
 
 </body>
