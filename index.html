@@ -902,7 +902,9 @@ body.gate-locked{overflow:hidden}body.gate-locked .shell,body.gate-locked .burst
                     Release🎉🎊✨
                 </button>
 
-             
+                <button class="btn secondary" id="restart">
+                     From the beginning ↻
+                </button>
 
             </div>
              <h5>💻 Made with ❤️ & a little bit of code </h5>
@@ -931,7 +933,7 @@ body.gate-locked{overflow:hidden}body.gate-locked .shell,body.gate-locked .burst
             <p class="heart-sub">وكل سنة وإنتِ بقلبي أقرب. ♡</p>
             <div class="actions">
                 <button class="btn secondary back">Back</button>
-                <button class="btn" id="heartRestart"> From the beginning ↻</button>
+                <button class="btn" id="heartRestart">من البداية ↻</button>
             </div>
             <h5>Made with ❤️, just for you</h5>
         </section>
@@ -1010,7 +1012,9 @@ document.querySelectorAll('.back').forEach(button => {
     });
 });
 
-
+document.getElementById('restart').addEventListener('click', () => {
+    showPage(0);
+});
 
 document.getElementById('wishBtn').addEventListener('click', () => {
     celebrate();
